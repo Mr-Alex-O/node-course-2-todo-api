@@ -88,7 +88,7 @@ describe('GET /todos/:id', () => {
     let badId = new ObjectID().toHexString;
 
     request(app)
-    .get(`/todos/badId`)
+    .get(`/todos/${badId}`)
     .expect(404)
     .end(done);
   });
