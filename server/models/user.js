@@ -72,6 +72,7 @@ UserSchema.statics.findByToken = function (token) {
   });
 };
 
+//hashes the password before it saves it
 UserSchema.pre('save', function (next) {
   let user = this;
 
